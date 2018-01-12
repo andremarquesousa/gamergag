@@ -1,0 +1,8 @@
+## WP
+.vagrant/
+
+## WP
+uploads/
+
+## NODE
+node_modules/

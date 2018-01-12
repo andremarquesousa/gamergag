@@ -1,0 +1,12 @@
+body.mobile {
+    footer {
+        .logo {
+            background-size: auto 16px;
+            height: 50px;
+        }
+
+        p {
+            padding: 14px 0;
+        }
+    }
+}

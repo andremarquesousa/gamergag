@@ -1,0 +1,12 @@
+
+body.mobile {
+    #general {
+        min-height: 100%;
+        padding-top: 70px;
+    }
+
+    .middle {
+        width: 100%;
+        margin: 0;
+    }
+}

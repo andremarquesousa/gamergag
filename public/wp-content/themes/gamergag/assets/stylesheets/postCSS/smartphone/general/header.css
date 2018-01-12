@@ -1,0 +1,23 @@
+body.mobile {
+    header {
+        height: 50px;
+
+        h1 {
+            width: 129px;
+            height: 16px;
+            margin-top: 17px;
+        }
+
+        .bt-menu {
+            left: 0;
+            height: 100%;
+
+            span
+            , span:before
+            , span:after {
+                width: 20px;
+                height: 3px;
+            }
+        }
+    }
+}
