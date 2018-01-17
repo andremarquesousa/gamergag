@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    background: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    list-style: none;
+    outline: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+html
+, body {
+    height: 100%;
+}
+
+body {
+    font: 400 14px lato, sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+#general {
+    min-height: 100%;
+    padding-top: 100px;
+
+    main {
+        padding-top: 50px;
+    }
+}
+
+.middle {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.clear {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+.image-cover {
+    background-size: cover;
+    display: block;
+    font-size: 0;
+    width: 100%;
+    height: 100%;
+}

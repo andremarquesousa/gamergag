@@ -1,0 +1,240 @@
+/* DESKTOP */
+	/* General */
+	/* COLORS */
+	* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    background: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    list-style: none;
+    outline: none
+}
+	*:focus {
+    outline: none;
+}
+	html, body {
+    height: 100%;
+}
+	body {
+    font: 400 14px lato, sans-serif;
+}
+	button {
+    cursor: pointer;
+}
+	#general {
+    min-height: 100%;
+    padding-top: 100px;
+}
+	#general main {
+        padding-top: 50px;
+    }
+	.middle {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+	.clear:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+	.image-cover {
+    background-size: cover;
+    display: block;
+    font-size: 0;
+    width: 100%;
+    height: 100%;
+}
+	header {
+    background: #ffb95f;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+	header h1 {
+        background: url('/assets/images/general/logo.svg') no-repeat center / contain;
+        width: 77px;
+        height: 72px;
+        float: left;
+        position: relative;
+        top: 13px;
+    }
+	header h1 a {
+            display: block;
+            font-size: 0;
+            width: 100%;
+            height: 100%;
+        }
+	header nav {
+        float: right;
+    }
+	header nav ul {
+            font-size: 0;
+        }
+	header nav ul li {
+                display: inline-block;
+                vertical-align: top;
+                margin-left: 20px
+            }
+	header nav ul li:first-child {
+    margin-left: 0;
+}
+	header nav ul li a {
+                    color: #ffffff;
+                    font-size: 14px;
+}
+	footer {
+    background: #000000;
+    height: 70px;
+    margin-top: 50px;
+}
+	footer .middle {
+        height: 100%;
+    }
+	footer p {
+        color: #cccccc;
+        font-size: 14px;
+        text-align: center;
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+    }
+	/* Components */
+	.content-page {
+    float: left;
+    width: 800px;
+}
+	.sidebar {
+    float: right;
+    width: 360px;
+}
+	.default-card .user, .default-card h3 {
+        font-weight: bold;
+        line-height: 1;
+    }
+	.default-card .user, .default-card .user a {
+        color: #ffb95f;
+        font-size: 14px;
+        text-transform: lowercase;
+    }
+	.default-card h3, .default-card h3 a {
+        color: #000000;
+        font-size: 30px;
+    }
+	.default-card .box {
+        margin-top: 10px;
+        position: relative;
+    }
+	.default-card .box .media {
+            width: 700px;
+        }
+	.default-card .box .media img, .default-card .box .media video, .default-card .box .media embed {
+                display: block;
+                width: 100%;
+            }
+	.default-card .box .interaction {
+            width: 70px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+	.default-card .box .interaction ul {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-flow: column;
+                        flex-flow: column;
+                box-orient: vertical;
+            }
+	.default-card .box .interaction ul li {
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    width: 100%;
+                    height: 70px;
+                    margin-top: 5px;
+                    -webkit-transition: -webkit-transform 0.4s;
+                    transition: -webkit-transform 0.4s;
+                    transition: transform 0.4s;
+                    transition: transform 0.4s, -webkit-transform 0.4s
+                }
+	.default-card .box .interaction ul li:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+}
+	.default-card .box .interaction ul li.like {
+    background-image: url('/assets/images/components/default-card/like.svg');
+    background-size: auto 45px;
+    background-color: #ffb95f;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+}
+	.default-card .box .interaction ul li.unlike {
+    background-image: url('/assets/images/components/default-card/unlike.svg');
+    background-size: auto 52px;
+    background-color: #cacbcc;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+}
+	.default-card .box .interaction ul li.facebook {
+    background-image: url('/assets/images/components/default-card/facebook.svg');
+    background-size: auto 38px;
+    background-color: #5c89e4;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+}
+	.default-card .box .interaction ul li a, .default-card .box .interaction ul li button {
+                        display: block;
+                        font-size: 0;
+                        width: 100%;
+                        height: 100%;
+}
+	/* Pages */
+	body.home main .content-page .list ul li.default-card {
+                        margin-top: 40px;
+                        padding-bottom: 40px;
+                        border-bottom: solid 1px #cccccc
+                    }
+	body.home main .content-page .list ul li.default-card:first-child {
+    margin-top: 0;
+}
+	body.home main .content-page .list ul li.default-card:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+	/* TABLET */
+	/* General */
+	/* Components */
+	/* Pages */
+	/* SMARTPHONE */
+	/* General */
+	/* Components */
+	/* Pages */
+	@media (max-width: 720px) {
+                body.mobile.home main section h2 {
+                    max-width: 100%;
+                    padding: 0 10px;
+                }
+
+                body.mobile.home main section .see-more {
+                    padding: 10px;
+                }
+
+                    body.mobile.home main section .see-more button {
+                        font-size: 14px;
+                    }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "gamergag",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andremarquesousa/gamergag.git"
+  },
+  "author": "Andre Marques",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andremarquesousa/gamergag/issues"
+  },
+  "homepage": "https://github.com/andremarquesousa/gamergag#readme",
+  "devDependencies": {
+    "@uirouter/angularjs": "^1.0.13",
+    "angular": "^1.6.8",
+    "angular-ui-mask": "^1.8.7",
+    "autoprefixer": "^7.1.4",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.0",
+    "precss": "^2.0.0"
+  }
+}

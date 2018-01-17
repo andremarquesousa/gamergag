@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="gamerGag" ng-controller="MainCtrl as mainCtrl">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>GamerGag</title>
+
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/stylesheets/style.css">
+
+</head>
+<body class="{{ mainCtrl.bodyClasses }}">
+    <div id="general">
+        <!-- HEADER -->
+        <header>
+            <div class="middle clear">
+                <h1><a ui-sref="home">GamerGag</a></h1>
+
+                <nav>
+                    <ul>
+                        <li ui-sref-active="active"><a ui-sref="register">Cadastro</a></li>
+                        <li ui-sref-active="active"><a ui-sref="create-meme">Criar meme</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- CONTENT -->
+
+        <main>
+            <div class="middle clear">
+                <div class="content-page">
+                    <ui-view></ui-view>
+                </div>
+
+                <!-- SIDEBAR -->
+                <aside class="sidebar">
+                    userss
+                </aside>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="middle">
+                <p>© Copyright 2018 GamerGag</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JAVASCRIPTS -->
+    <!-- library -->
+    <script type="text/javascript" src="/assets/javascripts/library/angular.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/library/angular-ui-router.min.js"></script>
+
+    <!-- module -->
+    <script type="text/javascript" src="/assets/javascripts/app.js"></script>
+
+    <!-- services -->
+    <script type="text/javascript" src="/assets/javascripts/services/recent-posts.js"></script>
+
+    <!-- directives -->
+
+    <!-- controllers -->
+    <script type="text/javascript" src="/assets/javascripts/controllers/main.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/controllers/home.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/controllers/register.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/controllers/user.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/controllers/post.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/controllers/create-meme.js"></script>
+
+</body>
+</html>

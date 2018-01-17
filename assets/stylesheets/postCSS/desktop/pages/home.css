@@ -1,0 +1,24 @@
+body.home {
+    main {
+        .content-page {
+            .list {
+                ul {
+                    li.default-card {
+                        margin-top: 40px;
+                        padding-bottom: 40px;
+                        border-bottom: solid 1px $lightGray;
+
+                        &:first-child {
+                            margin-top: 0;
+                        }
+
+                        &:last-child {
+                            padding-bottom: 0;
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

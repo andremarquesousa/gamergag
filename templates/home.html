@@ -1,0 +1,23 @@
+<div class="list">
+    <ul>
+        <li class="default-card" ng-repeat="post in posts">
+            <span class="user"><a ui-sref="user({ userId: post.user })">{{ post.user }}</a></span>
+
+            <h3><a ui-sref="post({ postId: post.titleId })">{{ post.title }}</a></h3>
+
+            <div class="box">
+                <div class="media">
+                    <img src="{{ post.media }}" alt="{{ post.title }}">
+                </div>
+
+                <div class="interaction">
+                    <ul>
+                        <li class="like"><button type="button" title="Gostei">Gostei</button></li>
+                        <li class="unlike"><button type="button" title="Não gostei">Não gostei</button></li>
+                        <li class="facebook"><button type="button" title="Facebook">Facebook</button></li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
