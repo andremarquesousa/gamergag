@@ -10,6 +10,14 @@ gamerGag.config(function($stateProvider, $locationProvider, $urlRouterProvider,)
                bodyClasses: 'home'
             }
         })
+        .state('register', {
+            url: '/cadastro',
+            templateUrl: '/templates/register.html',
+            controller: 'RegisterCtrl',
+            data: {
+               bodyClasses: 'register'
+            }
+        })
         .state('user', {
             url: '/usuario/:userId',
             templateUrl: '/templates/user.html',
@@ -34,14 +42,15 @@ gamerGag.config(function($stateProvider, $locationProvider, $urlRouterProvider,)
                bodyClasses: 'create-meme'
             }
         })
-        .state('register', {
-            url: '/cadastro',
-            templateUrl: '/templates/register.html',
-            controller: 'RegisterCtrl',
+        .state('contact', {
+            url: '/contato',
+            templateUrl: '/templates/contact.html',
+            controller: 'ContactCtrl',
             data: {
-               bodyClasses: 'register'
+               bodyClasses: 'contact'
             }
         });
+
 
     $urlRouterProvider.otherwise('/home');
     $locationProvider.hashPrefix('');

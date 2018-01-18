@@ -2,6 +2,8 @@
     box-sizing: border-box;
     backface-visibility: hidden;
     background: none;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
     text-decoration: none;
     margin: 0;
     padding: 0;
