@@ -1,5 +1,9 @@
-gamerGag.controller('PostCtrl', function($scope, $stateParams){
-    $scope.postName = $stateParams.postId;
+gamerGag.controller('PostCtrl', function($scope, $stateParams, Post){
+    $scope.post = {};
 
-    console.log($scope.postName);
+    Post.data().then(function(item) {
+        $scope.post = item.data;
+    }),function(error){
+
+    }
 });

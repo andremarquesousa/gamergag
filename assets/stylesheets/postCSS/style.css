@@ -8,10 +8,13 @@
 	/* Components */
         @import "desktop/components/content-page.css";
         @import "desktop/components/sidebar.css";
+        @import "desktop/components/list-post.css";
         @import "desktop/components/default-card.css";
+        @import "desktop/components/comments.css";
 
 	/* Pages */
 		@import "desktop/pages/home.css";
+        @import "desktop/pages/create-meme.css";
 
 
 /* TABLET */

@@ -1,4 +1,4 @@
-<div class="list" list-post>
+<div class="list-post" list-post>
     <ul>
         <li class="default-card" ng-repeat="post in posts | limitTo: limit">
             <span class="user"><a ui-sref="user({ userId: post.user })">{{ post.user }}</a></span>
@@ -26,5 +26,5 @@
         </li>
     </ul>
 
-    <button type="button" name="Carregar mais" ng-click="loadMore(posts)">Carregar mais</button>
+    <button ng-hide="hideButton" class="load-more default-button" type="button" name="Carregar mais" ng-click="loadMore(posts)">Carregar mais</button>
 </div>

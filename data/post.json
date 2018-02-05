@@ -1,0 +1,28 @@
+{
+    "user": "FTYzor",
+    "title": "Lorem Ipsum",
+    "titleId": "lorem-ipsum",
+    "media": "/assets/images/temporary/meme-2.jpg",
+    "comments": [
+        {
+            "user": "JessJames",
+            "userImage": "/assets/images/temporary/profile.jpg",
+            "content": "lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum",
+            "reply": []
+        },
+        {
+            "user": "DAmmetLus",
+            "userImage": "/assets/images/temporary/profile.jpg",
+            "content": "lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum",
+            "reply": [
+                {
+                    "user": "Lorem",
+                    "userImage": "/assets/images/temporary/profile.jpg",
+                    "content": "lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum"
+                }
+            ]
+        }
+    ],
+    "numberComments": "6523",
+    "likes": "123"
+}

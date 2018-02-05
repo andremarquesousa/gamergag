@@ -1,0 +1,19 @@
+{
+    "username": "brooklyn",
+    "posts": [
+        {
+            "title": "Sed ut perspiciatis unde omnis",
+            "titleId": "sed-ut-perspiciatis-unde-omnis",
+            "media": "/assets/images/temporary/meme-1.jpg",
+            "numberComments": "6523",
+            "likes": "2345"
+        },
+        {
+            "title": "Lorem Ipsum",
+            "titleId": "lorem-ipsum",
+            "media": "/assets/images/temporary/meme-2.jpg",
+            "numberComments": "6523",
+            "likes": "123"
+        }
+    ]
+}

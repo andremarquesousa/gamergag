@@ -30,7 +30,8 @@
 }
 	#general {
     min-height: 100%;
-    padding-top: 100px;
+    padding: 100px 0 120px;
+    position: relative;
 }
 	#general main {
         padding-top: 50px;
@@ -52,6 +53,49 @@
     font-size: 0;
     width: 100%;
     height: 100%;
+}
+	.default-button {
+    background-color: #ffb95f;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 40px;
+    padding: 0 50px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden
+}
+	.default-button:before, .default-button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-top: solid 20px transparent;
+    border-bottom: solid 20px transparent;
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+    transition: transform 0.4s, -webkit-transform 0.4s;
+}
+	.default-button:before {
+    left: 0;
+    border-left: solid 25px #ffffff;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+}
+	.default-button:after {
+    right: 0;
+    border-right: solid 25px #ffffff;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+}
+	.default-button:hover:before, .default-button:hover:after {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+}
+	.default-button[type="button"], .default-button[type="usbmit"] {
+    line-height: inherit;
+    height: 40px;
 }
 	header {
     background: #ffb95f;
@@ -96,8 +140,11 @@
 }
 	footer {
     background: #000000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     height: 70px;
-    margin-top: 50px;
 }
 	footer .middle {
         height: 100%;
@@ -120,6 +167,23 @@
     float: right;
     width: 360px;
 }
+	.list-post ul li.default-card {
+            margin-top: 40px;
+            padding-bottom: 40px;
+            border-bottom: solid 1px #cccccc
+        }
+	.list-post ul li.default-card:first-child {
+    margin-top: 0;
+}
+	.list-post ul li.default-card:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+	.list-post .load-more {
+        display: block;
+        width: 215px;
+        margin: 50px auto 0;
+    }
 	.default-card .user, .default-card h3 {
         font-weight: bold;
         line-height: 1;
@@ -180,7 +244,7 @@
             transform: scale(1.1);
 }
 	.default-card .box .interaction ul li.like {
-    background-image: url('/assets/images/components/default-card/like.svg');
+    background-image: url('/assets/images/components/interaction/like-white.svg');
     background-size: auto 45px;
     background-color: #ffb95f;
     -webkit-box-ordinal-group: 3;
@@ -188,7 +252,7 @@
             order: 2;
 }
 	.default-card .box .interaction ul li.unlike {
-    background-image: url('/assets/images/components/default-card/unlike.svg');
+    background-image: url('/assets/images/components/interaction/unlike-white.svg');
     background-size: auto 52px;
     background-color: #cacbcc;
     -webkit-box-ordinal-group: 4;
@@ -234,19 +298,226 @@
 	.default-card .info li a:hover {
     text-decoration: underline;
 }
-	/* Pages */
-	body.home main .content-page .list ul li.default-card {
-                        margin-top: 40px;
-                        padding-bottom: 40px;
-                        border-bottom: solid 1px #cccccc
-                    }
-	body.home main .content-page .list ul li.default-card:first-child {
+	.comments {
+    margin-top: 15px;
+}
+	.comments .comment {
+        width: 100%;
+        padding-left: 80px;
+        position: relative;
+        margin-top: 20px
+    }
+	.comments .comment:first-child {
     margin-top: 0;
 }
-	body.home main .content-page .list ul li.default-card:last-child {
-    padding-bottom: 0;
-    border-bottom: none;
+	.comments .comment .image {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 70px;
+            height: 70px;
+            background-color: #000000;
 }
+	.comments .comment .image a {
+                -webkit-transition: opacity 0.4s;
+                transition: opacity 0.4s
+            }
+	.comments .comment .image a:hover {
+    opacity: 0.9;
+}
+	.comments .comment .data {
+            max-width: 400px;
+}
+	.comments .comment .data .head {
+                font-size: 0;
+            }
+	.comments .comment .data .head span {
+                    display: inline-block;
+                    vertical-align: top;
+                    font-size: 12px;
+                    margin-left: 15px
+                }
+	.comments .comment .data .head span:first-child {
+    margin-left: 0;
+}
+	.comments .comment .data .head span.user {
+    font-weight: 700;
+}
+	.comments .comment .data .head span.user a {
+                            color: #000000
+}
+	.comments .comment .data .head span.user a:hover {
+    text-decoration: underline;
+}
+	.comments .comment .data .head span.number-likes {
+    color: #ffb95f;
+    font-weight: 500;
+}
+	.comments .comment .data .content {
+
+            }
+	.comments .comment .data .interaction {
+                margin-top: 10px;
+            }
+	.comments .comment .data .interaction ul {
+                    font-size: 0;
+                }
+	.comments .comment .data .interaction ul li {
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-left: 15px
+                    }
+	.comments .comment .data .interaction ul li:first-child {
+    margin-left: 0;
+}
+	.comments .comment .data .interaction ul li.like, .comments .comment .data .interaction ul li.unlike {
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+    transition: transform 0.4s, -webkit-transform 0.4s;
+    width: 20px;
+    height: 20px;
+}
+	.comments .comment .data .interaction ul li.like button, .comments .comment .data .interaction ul li.unlike button {
+                                font-size: 0;
+                                width: 100%;
+                                height: 100%;
+}
+	.comments .comment .data .interaction ul li.like:hover, .comments .comment .data .interaction ul li.unlike:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+}
+	.comments .comment .data .interaction ul li.like {
+    background-image: url('/assets/images/components/interaction/like-gray.svg');
+    background-size: auto 13px
+}
+	.comments .comment .data .interaction ul li.like.active {
+    background-image: url('/assets/images/components/interaction/like-orange.svg');
+}
+	.comments .comment .data .interaction ul li.unlike {
+    background-image: url('/assets/images/components/interaction/unlike-gray.svg');
+    background-size: auto 15px
+}
+	.comments .comment .data .interaction ul li.unlike.active {
+    background-image: url('/assets/images/components/interaction/unlike-orange.svg');
+}
+	.comments .comment .data .interaction ul li.reply {
+    font-size: 14px;
+}
+	.comments .comment .data .interaction ul li.reply a, .comments .comment .data .interaction ul li.reply button {
+                                text-decoration: underline
+}
+	.comments .comment .data .interaction ul li.reply a:hover, .comments .comment .data .interaction ul li.reply button:hover {
+    text-decoration: none;
+}
+	.comments .comment .reply .comment {
+                margin-top: 10px;
+                padding-left: 50px;
+            }
+	.comments .comment .reply .comment .image {
+                    width: 40px;
+                    height: 40px;
+                }
+	/* Pages */
+	body.home main .content-page .list {
+                
+            }
+	body.create-meme main .content-page .image {
+            	display: inline-block;
+            	margin-top: 30px;
+            	border: solid 2px #999999;
+            }
+	body.create-meme main .content-page .image .canvas {
+            		display: block;
+            	}
+	body.create-meme main .content-page .file {
+            	-webkit-backface-visibility: hidden;
+            	        backface-visibility: hidden;
+                float: left;
+            	-webkit-transition: -webkit-transform 0.4s;
+            	transition: -webkit-transform 0.4s;
+            	transition: transform 0.4s;
+            	transition: transform 0.4s, -webkit-transform 0.4s;
+            	display: block;
+            	width: 300px;
+            	height: 40px;
+            	margin: 30px 0 0;
+            	border-radius: 20px;
+            	position: relative;
+            	overflow: hidden
+            }
+	body.create-meme main .content-page .file:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+}
+	body.create-meme main .content-page .file input, body.create-meme main .content-page .file:before {
+            		position: absolute;
+            		left: 0;
+            		top: 0;
+            		width: 100%;
+            		height: 100%;
+}
+	body.create-meme main .content-page .file:before {
+    content: 'Upload';
+    background: #999999;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    z-index: 2;
+    cursor: pointer;
+}
+	body.create-meme main .content-page .file input {
+            		opacity: 0;
+            		z-index: 1;
+}
+	body.create-meme main .content-page p.obs {
+                float: left;
+                clear: right;
+            	color: #999999;
+            	font-size: 12px;
+            	font-style: italic;
+                line-height: 40px;
+            	margin: 30px 0 0 30px;
+            }
+	body.create-meme main .content-page .meme-detail {
+                clear: both;
+            	width: 300px;
+                padding-top: 50px;
+            	margin: 0 0 50px;
+            }
+	body.create-meme main .content-page .meme-detail p, body.create-meme main .content-page .meme-detail input[type="text"] {
+            		color: #999999;
+            	}
+	body.create-meme main .content-page .meme-detail p {
+            		font-size: 20px;
+            		font-weight: 700;
+            		margin-top: 20px
+            	}
+	body.create-meme main .content-page .meme-detail p:first-child {
+    margin-top: 0;
+}
+	body.create-meme main .content-page .meme-detail input[type="text"] {
+            		display: block;
+            		font-size: 14px;
+            		width: 300px;
+            		height: 40px;
+            		margin-top: 10px;
+            		padding: 0 15px;
+            		border: solid 2px #999999;
+            		border-radius: 20px;
+            	}
+	body.create-meme main .content-page .save {
+                background: #ffb95f;
+                float: right;
+            	color: #ffffff;
+            	font-size: 24px;
+                padding: 10px 30px;
+            	margin: 30px 205px 0 0;
+                border-radius: 20px;
+            }
 	/* TABLET */
 	/* General */
 	/* Components */

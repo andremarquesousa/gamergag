@@ -1,10 +1,11 @@
-gamerGag.service('recentPosts', function($http, $q) {
-    this.posts = function(){
+gamerGag.service('User', function($http, $q) {
+
+    this.data = function(){
         var deferred = $q.defer();
 
         $http({
             method: 'GET',
-            url: '/data/recent-posts.json'
+            url: '/data/user.json'
         }).then(function successCallback(response) {
             deferred.resolve(response);
             console.log('success')

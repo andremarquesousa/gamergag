@@ -1,0 +1,151 @@
+.comments {
+    margin-top: 15px;
+
+    .comment {
+        width: 100%;
+        padding-left: 80px;
+        position: relative;
+        margin-top: 20px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        .image {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 70px;
+            height: 70px;
+            background-color: $black;
+
+            a {
+                transition: opacity 0.4s;
+
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+        }
+
+        .data {
+            max-width: 400px;
+
+            .head {
+                font-size: 0;
+
+                span {
+                    display: inline-block;
+                    vertical-align: top;
+                    font-size: 12px;
+                    margin-left: 15px;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+
+                    &.user {
+                        font-weight: 700;
+
+                        a {
+                            color: $black;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+
+                    &.number-likes {
+                        color: $orange;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            .content {
+
+            }
+
+            .interaction {
+                margin-top: 10px;
+
+                ul {
+                    font-size: 0;
+
+                    li {
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-left: 15px;
+
+                        &:first-child {
+                            margin-left: 0;
+                        }
+
+                        &.like
+                        , &.unlike {
+                            transition: transform 0.4s;
+                            width: 20px;
+                            height: 20px;
+
+                            button {
+                                font-size: 0;
+                                width: 100%;
+                                height: 100%;
+                            }
+
+                            &:hover {
+                                transform: scale(1.2);
+                            }
+                        }
+
+                        &.like {
+                            background-image: url('/assets/images/components/interaction/like-gray.svg');
+                            background-size: auto 13px;
+
+                            &.active {
+                                background-image: url('/assets/images/components/interaction/like-orange.svg');
+                            }
+                        }
+
+                        &.unlike {
+                            background-image: url('/assets/images/components/interaction/unlike-gray.svg');
+                            background-size: auto 15px;;
+
+                            &.active {
+                                background-image: url('/assets/images/components/interaction/unlike-orange.svg');
+                            }
+                        }
+
+                        &.reply {
+                            font-size: 14px;
+
+                            a
+                            , button {
+                                text-decoration: underline;
+
+                                &:hover {
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .reply {
+            .comment {
+                margin-top: 10px;
+                padding-left: 50px;
+
+                .image {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+}
