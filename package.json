@@ -1,28 +1,23 @@
 {
-  "name": "gamergag",
-  "version": "1.0.0",
-  "description": "",
-  "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/andremarquesousa/gamergag.git"
-  },
-  "author": "Andre Marques",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/andremarquesousa/gamergag/issues"
-  },
-  "homepage": "https://github.com/andremarquesousa/gamergag#readme",
   "devDependencies": {
-    "@uirouter/angularjs": "^1.0.13",
-    "angular": "^1.6.8",
-    "angular-ui-mask": "^1.8.7",
-    "autoprefixer": "^7.1.4",
-    "gulp": "^3.9.1",
-    "gulp-postcss": "^7.0.0",
-    "precss": "^2.0.0"
+    "css-loader": "^2.1.1",
+    "cssnano": "^4.1.10",
+    "eslint": "^5.16.0",
+    "eslint-loader": "^2.1.2",
+    "file-loader": "^3.0.1",
+    "mini-css-extract-plugin": "^0.6.0",
+    "postcss": "^7.0.16",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.6.0",
+    "precss": "^4.0.0",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.3.1"
+  },
+  "scripts": {
+    "build": "webpack -p --config ./webpack/webpack.config.js --display-error-details",
+    "watch": "webpack-dev-server webpack -d --watch --config ./webpack/webpack.config.js --display-error-details",
+    "start": "webpack-dev-server --config ./webpack/webpack.config.js --display-error-details"
   }
 }
