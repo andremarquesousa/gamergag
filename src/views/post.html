@@ -1,0 +1,78 @@
+<div class="default-card">
+    <span class="user"><a ui-sref="user({ userId: post.user })">{{ post.user }}</a></span>
+
+    <h3><a ui-sref="post({ postId: post.titleId })">{{ post.title }}</a></h3>
+
+    <div class="box">
+        <div class="media">
+            <img src="{{ post.media }}" alt="{{ post.title }}">
+        </div>
+
+        <div class="interaction">
+            <ul>
+                <li class="like"><button type="button" title="Gostei">Gostei</button></li>
+                <li class="unlike"><button type="button" title="Não gostei">Não gostei</button></li>
+                <li class="facebook"><button type="button" title="Facebook">Facebook</button></li>
+            </ul>
+        </div>
+    </div>
+
+    <ul class="info">
+        <li><a ui-sref="post({ postId: post.titleId })">Comentários ({{ post.numberComments }})</a></li>
+        <li><a ui-sref="post({ postId: post.titleId })">Boa! ({{ post.likes }})</a></li>
+    </ul>
+</div>
+
+<div class="comments">
+    <ul>
+        <li class="comment" ng-repeat="comment in post.comments">
+            <span class="image"><a ui-sref="user({ userId: comment.user })" class="image-cover" style="background-image: url('{{ comment.userImage }}')"></a></span>
+
+            <div class="data">
+                <div class="head">
+                    <span class="user"><a ui-sref="user({ userId: comment.user })">{{ comment.user }}</a></span>
+                    <span class="number-likes">123 curtir</span>
+                </div>
+
+                <div class="content">
+                    <p>{{ comment.content }}</p>
+                </div>
+
+                <div class="interaction">
+                    <ul>
+                        <li class="like"><button type="button" title="Gostei">Gostei</button></li>
+                        <li class="unlike"><button type="button" title="Não gostei">Não gostei</button></li>
+                        <li class="reply"><button type="button" title="Não gostei">Responder</button></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="reply">
+                <ul>
+                    <li class="comment" ng-repeat="reply in comment.reply">
+                        <span class="image"><a ui-sref="user({ userId: reply.user })" class="image-cover" style="background-image: url('{{ reply.userImage }}');"></a></span>
+
+                        <div class="data">
+                            <div class="head">
+                                <span class="user"><a ui-sref="user({ userId: reply.user })">{{ reply.user }}</a></span>
+                                <span class="number-likes">123 curtir</span>
+                            </div>
+
+                            <div class="content">
+                                <p>{{ reply.content }}</p>
+                            </div>
+
+                            <div class="interaction">
+                                <ul>
+                                    <li class="like"><button type="button" title="Gostei">Gostei</button></li>
+                                    <li class="unlike"><button type="button" title="Não gostei">Não gostei</button></li>
+                                    <li class="reply"><button type="button" title="Não gostei">Responder</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
