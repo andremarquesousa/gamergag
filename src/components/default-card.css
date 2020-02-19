@@ -11,14 +11,14 @@
 
     .user
     , .user a {
-        color: $orange;
+        color: #ffb95f;
         font-size: 14px;
         text-transform: lowercase;
     }
 
     h3
     , h3 a {
-        color: $black;
+        color: #000000;
         font-size: 30px;
     }
 
@@ -64,7 +64,7 @@
                     &.like {
                         background-image: url('/assets/images/components/interaction/like-white.svg');
                         background-size: auto 45px;
-                        background-color: $orange;
+                        background-color: #ffb95f;
                         order: 2;
                     }
 
@@ -100,13 +100,13 @@
 
         li {
             display: inline-block;
-            color: $lightGray;
+            color: #cccccc;
             font-size: 16px;
             font-weight: 700;
             vertical-align: top;
             margin-left: 15px;
             padding-left: 15px;
-            border-left: solid 1px $lightGray;
+            border-left: solid 1px #cccccc;
 
             &:first-child {
                 margin-left: 0;
@@ -115,7 +115,7 @@
             }
 
             a {
-                color: $lightGray;
+                color: #cccccc;
 
                 &:hover {
                     text-decoration: underline;

@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    background: none;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    list-style: none;
+    outline: none;
+}
+
+html
+, body {
+    height: 100%;
+}
+
+body {
+    font: 400 14px lato, sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+#general {
+    min-height: 100%;
+    padding: 100px 0 120px;
+    position: relative;
+}
+
+main {
+    padding-top: 50px;
+}
+
+.middle {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.default-button {
+    background-color: #ffb95f;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 40px;
+    padding: 0 50px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.default-button:before
+, .default-button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-top: solid 20px transparent;
+    border-bottom: solid 20px transparent;
+    transition: transform 0.4s;
+}
+
+.default-button:before {
+    left: 0;
+    border-left: solid 25px #ffffff;
+    transform: translateX(-100%);
+}
+
+.default-button:after {
+    right: 0;
+    border-right: solid 25px #ffffff;
+    transform: translateX(100%);
+}
+
+.default-button:hover:before
+, .default-button:hover:after {
+    transform: translateX(0);
+}
+
+.default-button[type="button"]
+, .default-button[type="submit"] {
+    line-height: inherit;
+    height: 40px;
+}

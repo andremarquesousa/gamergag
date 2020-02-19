@@ -1,41 +1,54 @@
-header {
+.header {
     background: #ffb95f;
     width: 100%;
     height: 100px;
+    padding-top: 13px;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
 }
-header h1 {
-    background: url('/assets/images/general/logo.svg') no-repeat center / contain;
+
+.middle {
+    overflow: hidden;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.logo {
+    background: url('../assets/images/general/logo.svg') no-repeat center / contain;
     width: 77px;
     height: 72px;
     float: left;
     position: relative;
-    top: 13px;
 }
-header h1 a {
+
+.logo a {
     display: block;
     font-size: 0;
     width: 100%;
     height: 100%;
 }
-header nav {
+
+.menu {
     float: right;
 }
-header nav ul {
+
+.menu ul {
     font-size: 0;
 }
-header nav ul li {
+
+.itemMenu {
     display: inline-block;
     vertical-align: top;
     margin-left: 20px;
 }
-header nav ul li:first-child {
+
+.itemMenu:first-child {
     margin-left: 0;
 }
-header nav ul li a {
+
+.itemMenu a {
     color: #fff;
     font-size: 14px;
 }

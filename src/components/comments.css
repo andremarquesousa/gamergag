@@ -17,7 +17,7 @@
             top: 0;
             width: 70px;
             height: 70px;
-            background-color: $black;
+            background-color: #000000;
 
             a {
                 transition: opacity 0.4s;
@@ -48,7 +48,7 @@
                         font-weight: 700;
 
                         a {
-                            color: $black;
+                            color: #000000;
 
                             &:hover {
                                 text-decoration: underline;
@@ -57,7 +57,7 @@
                     }
 
                     &.number-likes {
-                        color: $orange;
+                        color: #ffb95f;
                         font-weight: 500;
                     }
                 }

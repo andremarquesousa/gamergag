@@ -3,7 +3,7 @@
         li.default-card {
             margin-top: 40px;
             padding-bottom: 40px;
-            border-bottom: solid 1px $lightGray;
+            border-bottom: solid 1px #cccccc;
 
             &:first-child {
                 margin-top: 0;

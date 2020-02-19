@@ -1,22 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Header from './views/header';
-import Main from './views/home';
-
-import './assets/stylesheets/bundle.css';
-
+import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom';
+import Header from './general/header';
+import Home from './pages/home';
+import CreateMeme from './pages/create-meme';
+import './general/base.css';
 import * as serviceWorker from './serviceWorker';
 
 const Layout = (
-    <div className="root">
+    <Router>
         <Header />
-        <Main />
-    </div>
+        <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/create-meme" component={CreateMeme} />
+        </Switch>
+    </Router>
 );
 
 ReactDOM.render(Layout, document.getElementById('general'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
