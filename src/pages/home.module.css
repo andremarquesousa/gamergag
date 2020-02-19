@@ -1,9 +1,23 @@
-body.home {
-    main {
-        .content-page {
-            .list {
-                
-            }
-        }
-    }
+.contentPage {
+    float: left;
+    width: 100%;
+    max-width: 800px;
+}
+
+.listPost >div {
+    margin-top: 80px;
+}
+
+.listPost >div:first-child {
+    margin-top: 0;
+}
+
+.sidebar {
+    float: right;
+    width: 100%;
+    max-width: 300px;
+}
+
+.loadMore {
+    margin-top: 80px;
 }

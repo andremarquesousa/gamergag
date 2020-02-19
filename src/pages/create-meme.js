@@ -2,7 +2,7 @@ import React from 'react';
 import Posts from '../data/recent-posts.json';
 import styles from './create-meme.module.css';
 
-class Home extends React.Component {
+class CreateMeme extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -83,33 +83,33 @@ class Home extends React.Component {
     }
 
     render() {
-        console.log(this.actions);
-
         return (
-            <div className={styles.middle}>
-                <div className={styles.image}>
-                    <canvas className={styles.canvas} width="600" height="400"></canvas>
+            <main>
+                <div className={styles.middle}>
+                    <div className={styles.image}>
+                        <canvas className={styles.canvas} width="600" height="400"></canvas>
+                    </div>
+
+                    <label className={styles.file}>
+                        <input type="file" onChange={this.actions.getImage} placeholder="escolha uma foto" />
+                    </label>
+
+                    <p className={styles.obs}>600 x 400</p>
+
+                    <div className={styles.memeDetail}>
+                        <p>tamanho da fonte</p>
+                        <input type="range" onChange={this.actions.range} min="24" max="40" value={this.fontSize} />
+                        <p>texto(superior)</p>
+                        <input className={styles.textTop} onChange={this.actions.write} onKeyUp={this.actions.write} type="text" />
+                        <p>texto(inferior)</p>
+                        <input className={styles.textBottom} onChange={this.actions.write} onKeyUp={this.actions.write} type="text" />
+                    </div>
+
+                    <a href="#" className={styles.save} onClick={this.actions.save} download="meme.jpg">Salvar</a>
                 </div>
-
-                <label className={styles.file}>
-                    <input type="file" onChange={this.actions.getImage} placeholder="escolha uma foto" />
-                </label>
-
-                <p className={styles.obs}>600 x 400</p>
-
-                <div className={styles.memeDetail}>
-                    <p>tamanho da fonte</p>
-                    <input type="range" onChange={this.actions.range} min="24" max="40" value={this.fontSize} />
-                    <p>texto(superior)</p>
-                    <input className={styles.textTop} onChange={this.actions.write} onKeyUp={this.actions.write} type="text" />
-                    <p>texto(inferior)</p>
-                    <input className={styles.textBottom} onChange={this.actions.write} onKeyUp={this.actions.write} type="text" />
-                </div>
-
-                <a href="#" className={styles.save} onClick={this.actions.save} download="meme.jpg">Salvar</a>
-            </div>
+            </main>
         )
     }
 }
 
-export default Home;
+export default CreateMeme;

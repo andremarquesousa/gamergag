@@ -6,7 +6,7 @@ class Header extends React.Component {
     render() {
         return (
             <header className={styles.header}>
-                <div className="middle">
+                <div className={`middle ${styles.middle}`}>
                     <h1 className={styles.logo}><Link to="/">GamerGag</Link></h1>
 
                     <nav className={styles.menu}>

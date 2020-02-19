@@ -42,6 +42,12 @@ main {
     position: relative;
 }
 
+.middle:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
 .default-button {
     background-color: #ffb95f;
     color: #ffffff;
