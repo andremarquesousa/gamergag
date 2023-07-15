@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "gamergag",
+    "slug": "gamergag",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/images/general/icons/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./src/assets/images/general/icons/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/images/general/icons/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./src/assets/images/general/favicon.png"
+    },
+    "experiments": {
+      "tsconfigPaths": true
+    },
+    "sourceExts": [ "js", "json", "ts", "tsx", "jsx", "vue"]
+  }
+}
